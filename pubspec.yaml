@@ -18,5 +18,5 @@ dev_dependencies:
 
 cider:
   link_template:
-    tag: 'https://github.com/f3ath/dart-http-interop-io/releases/tag/%tag%'
-    diff: 'https://github.com/f3ath/dart-http-interop-io/compare/%from%...%to%'
+    tag: 'https://github.com/f3ath/dart-http-interop-shelf/releases/tag/%tag%'
+    diff: 'https://github.com/f3ath/dart-http-interop-shelf/compare/%from%...%to%'
