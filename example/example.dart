@@ -1,8 +1,3 @@
-# http_interop_shelf
-
-Converts Interop handlers to Shelf handlers and vice versa.
-
-```dart
 import 'dart:convert';
 import 'dart:io';
 
@@ -25,16 +20,13 @@ void main() async {
 }
 
 /// This is a http_interop handler that echos the request back to the client.
-Future<Response> echo(Request request) async =>
-    Response(
-        200,
-        Body.json({
-          'method': request.method,
-          'body': await request.body.decode(utf8),
-          'headers': request.headers
-        }),
-        Headers.from({
-          'Content-Type': ['application/json']
-        }));
-
-```
+Future<Response> echo(Request request) async => Response(
+    200,
+    Body.json({
+      'method': request.method,
+      'body': await request.body.decode(utf8),
+      'headers': request.headers
+    }),
+    Headers.from({
+      'Content-Type': ['application/json']
+    }));
