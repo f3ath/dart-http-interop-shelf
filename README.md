@@ -1,6 +1,6 @@
 # http_interop_shelf
 
-Converts Interop handlers to Shelf handlers and vice versa.
+Converts Interop handlers to Shelf handlers.
 
 ```dart
 import 'dart:convert';
@@ -14,6 +14,7 @@ import 'package:shelf/shelf_io.dart';
 void main() async {
   const host = 'localhost';
   const port = 8080;
+  /// The shelf handler
   final shelfHandler = echo.shelfHandler;
   final server = await serve(shelfHandler, host, port);
   ProcessSignal.sigint.watch().listen((event) async {
